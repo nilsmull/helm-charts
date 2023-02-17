@@ -11,7 +11,7 @@ metadata:
     {{- end }}
     "app.kubernetes.io/managed-by": "{{ .Release.Service }}"
     "app.kubernetes.io/instance": "{{ .Release.Name }}"
-    "app.kubernetes.io/component": "{{ .Values.controller.componentName }}"
+    "app.kubernetes.io/component": "{{ .Values.agent.componentName }}"
   {{- if .Values.controller.agentListenerServiceAnnotations }}
   annotations:
     {{- toYaml .Values.controller.agentListenerServiceAnnotations | nindent 4 }}
